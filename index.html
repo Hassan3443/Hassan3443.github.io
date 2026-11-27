@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hassan Ashraf | Data Analyst</title>
 <meta name="description" content="Hassan Ashraf: computer science student in Cairo who cleans, analyzes and models data with Python, Pandas and SQL.">
-<meta name="theme-color" content="#06080f">
+<meta name="theme-color" content="#1b7a8a">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hassan Ashraf | Data Analyst">
 <meta property="og:description" content="Computer science student in Cairo who cleans, analyzes and models data with Python, Pandas and SQL.">
@@ -97,10 +97,62 @@ footer{padding:36px 0;color:var(--mut);font-size:14px;border-top:1px solid var(-
 @media(max-width:900px){.hero .grid{grid-template-columns:1fr}.term{display:none}.stats,.skills{grid-template-columns:repeat(2,1fr)}.cards,.hire{grid-template-columns:1fr}.bento{grid-template-columns:1fr}.s2,.s3,.s4{grid-column:auto}.nav a:nth-child(n+5){display:none}}
 .shot{height:180px;margin:-26px -26px 4px;overflow:hidden;border-bottom:1px solid var(--line);background:#0b0f14}.shot img{width:100%;height:100%;object-fit:cover;object-position:50% 0%;animation:pan 14s ease-in-out infinite alternate}.card:hover .shot img{animation-duration:7s}@keyframes pan{from{object-position:50% 0%}to{object-position:50% 100%}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
-.card.rv.in{transition:opacity .8s,transform .25s ease-out,border-color .3s}.btn.p:hover{box-shadow:0 14px 36px -6px rgba(52,211,153,.75)}</style>
+.card.rv.in{transition:opacity .8s,transform .25s ease-out,border-color .3s}.btn.p:hover{box-shadow:0 14px 36px -6px rgba(52,211,153,.75)}/* ===== Glassy theme: teal-to-indigo backdrop, frosted panels, visible borders.
+   The slow background drift is the only running animation. ===== */
+:root{--bg:#1a6a86;--card:transparent;--line:rgba(255,255,255,.34);--txt:#fff;--mut:rgba(255,255,255,.82);--a:#9ff5dc;--b:#bfe3ff;--c:#d6ccff;--d:#ffd0ec;
+--glass:linear-gradient(145deg,rgba(255,255,255,.20),rgba(255,255,255,.05)),linear-gradient(rgba(6,30,52,.36),rgba(6,30,52,.36));
+--gb:rgba(255,255,255,.42);--gs:0 10px 34px rgba(4,24,44,.34),inset 0 1px 0 rgba(255,255,255,.45);--blur:blur(20px) saturate(165%);color-scheme:dark}
+html{background:#154e72}
+body{background:linear-gradient(135deg,#136a80 0%,#2a8f9c 32%,#4a7fc4 66%,#7a66cc 100%);background-color:#3a7ab0;min-height:100vh}
+body::before{content:"";position:fixed;inset:-20%;z-index:0;pointer-events:none;background:
+radial-gradient(38% 34% at 15% 20%,rgba(160,255,215,.60),transparent 70%),
+radial-gradient(42% 38% at 85% 15%,rgba(120,190,255,.45),transparent 70%),
+radial-gradient(46% 42% at 70% 90%,rgba(190,140,255,.48),transparent 70%),
+radial-gradient(34% 30% at 10% 85%,rgba(40,170,200,.50),transparent 70%);animation:drift 30s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(4%,3%) scale(1.08)}}
+.progress{display:none}
+::selection{background:rgba(255,255,255,.35);color:#fff}
+/* stop every other animation */
+.dot,.grad,.type:after,.shot img{animation:none!important}
+.rv{opacity:1!important;transform:none!important;transition:none!important}
+.grad{background:none;-webkit-background-clip:initial;background-clip:initial;color:#fff;text-shadow:0 2px 18px rgba(4,24,44,.4)}
+h1{text-shadow:0 2px 18px rgba(4,24,44,.35)}
+.type:after{display:none}.type{color:#fff}
+.dot{background:#9ff5dc;box-shadow:0 0 12px rgba(159,245,220,.9)}
+.eyebrow{color:#fff;opacity:.9}
+/* nav */
+.nav{background:linear-gradient(180deg,rgba(6,30,52,.55),rgba(6,30,52,.38));-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);border:1px solid var(--gb);box-shadow:0 8px 28px rgba(4,24,44,.35)}
+.nav a{color:rgba(255,255,255,.9);border:1px solid transparent}
+.nav a:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.4)}
+.nav a.on{background:#fff;color:#0e4a63;font-weight:700}
+.logo{background:#fff!important;color:#0e4a63!important}
+/* glass panels */
+.stat,.bx,.card,.sk,.cta,.pill,.term{background:var(--glass)!important;border:1px solid var(--gb)!important;box-shadow:var(--gs);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);color:#fff}
+.term .bar{border-bottom:1px solid var(--line)}.term pre{color:#fff}
+.k{color:#ffd0ec}.s{color:#9ff5dc}.n{color:#bfe3ff}.cm{color:rgba(255,255,255,.6)}
+.card:before{background:radial-gradient(380px circle at var(--x) var(--y),rgba(255,255,255,.22),transparent 45%)}
+.card:hover{border-color:rgba(255,255,255,.75)!important;box-shadow:0 14px 40px rgba(4,24,44,.4),0 0 28px rgba(150,230,255,.35),inset 0 1px 0 rgba(255,255,255,.55)}
+.ico,.card:nth-child(n) .ico{background:#fff!important;color:#0e4a63}
+.metric{color:#9ff5dc;font-weight:500}
+.tags span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);color:#fff}
+.shot{background:rgba(6,30,52,.5);border-bottom:1px solid var(--gb)}
+.shot img{object-position:50% 50%}
+/* buttons and filters */
+.btn{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.45);color:#fff}
+.btn:hover{background:rgba(255,255,255,.26);border-color:#fff}
+.btn.p{background:#fff;color:#0e4a63;border:1px solid #fff;box-shadow:0 8px 26px rgba(255,255,255,.28)}
+.btn.p:hover{box-shadow:0 12px 32px rgba(255,255,255,.4)}
+.f{border:1px solid rgba(255,255,255,.4);color:#fff;background:rgba(255,255,255,.1)}
+.f.on,.f:hover{background:#fff;color:#0e4a63;border-color:#fff}
+.sk h3{color:#bfe3ff}.sk li{color:#fff}.sk li:before{background:#9ff5dc}
+.tl{border-left:2px solid rgba(255,255,255,.4)}.ti:before{background:#2a6a9a;border-color:#fff}.ti small{color:#9ff5dc}
+.hire .bx:before{background:linear-gradient(90deg,#fff,#9ff5dc)}
+.cta{background:radial-gradient(circle at 50% 0,rgba(255,255,255,.25),transparent 60%),var(--glass)!important}
+footer{border-top:1px solid var(--gb);color:rgba(255,255,255,.85)}
+</style>
 </head>
 <body>
-<canvas id="net" aria-hidden="true"></canvas><div class="aurora a1"></div><div class="aurora a2"></div><div class="progress" id="pg"></div>
+<div class="progress" id="pg"></div>
 <nav class="nav"><a class="logo" href="#top">HA</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#journey">Journey</a><a href="#hire">Hire me</a><a href="#contact">Contact</a></nav>
 <header id="top" class="hero"><div class="wrap">
  <div class="grid">
@@ -123,7 +175,7 @@ report = summarize(df)
 <span class="cm"># every fix written to a report</span></pre></div>
  </div>
  <div class="stats">
-  <div class="stat rv"><b data-n="12">0</b><span>public repositories</span></div>
+  <div class="stat rv"><b data-n="17">0</b><span>public repositories</span></div>
   <div class="stat rv"><b data-n="3269">0</b><span>orders analyzed in one project</span></div>
   <div class="stat rv"><b data-n="16">0</b><span>SQL queries with window functions</span></div>
   <div class="stat rv"><b>~1M</b><span>telecom records in the churn pipeline</span></div>
@@ -148,6 +200,8 @@ report = summarize(df)
  <p class="sub rv">Real repositories with READMEs. Click a card to open the code or the live demo.</p>
  <div class="filters rv"><button class="f on" data-f="all">All</button><button class="f" data-f="analysis">Analysis</button><button class="f" data-f="ml">Machine learning</button><button class="f" data-f="web">Web</button></div>
  <div class="cards">
+  <a class="card rv" data-c="ml" href="https://github.com/Hassan3443/digit-recognition-mlp" target="_blank" rel="noopener"><div class="shot"><img src="img/digits.webp" alt="" loading="lazy" style="object-fit:contain;background:#fff"></div><div class="top"><div class="ico">DR</div><span class="arrow">↗</span></div><h3>Digit Recognition: Neural Network vs Classic Models</h3><p>A small neural network compared with logistic regression, k-NN and an SVM on 1,797 handwritten digits. Same split, cross-validated, with a confusion matrix and the model's mistakes.</p><div class="metric">SVM 98.0% test, MLP 96.7%</div><div class="tags"><span>scikit-learn</span><span>MLP</span><span>SVM</span></div></a>
+  <a class="card rv" data-c="ml" href="https://github.com/Hassan3443/breast-cancer-risk-model" target="_blank" rel="noopener"><div class="shot"><img src="img/cancer.webp" alt="" loading="lazy" style="object-fit:contain;background:#fff"></div><div class="top"><div class="ico">BC</div><span class="arrow">↗</span></div><h3>Breast Cancer Diagnosis Model</h3><p>Benign vs malignant from 30 cell measurements. Three models compared, then a decision threshold chosen on the training set to favour recall, with the cost in false alarms shown.</p><div class="metric">Recall 92.5% to 98.1% at threshold 0.09</div><div class="tags"><span>scikit-learn</span><span>ROC-AUC</span><span>Threshold tuning</span></div></a>
   <a class="card rv" data-c="ml" href="https://hassan3443.github.io/Customer-Churn-Prediction-Pipeline/" target="_blank" rel="noopener"><div class="shot"><img src="img/churn.webp" alt="" loading="lazy"></div><div class="top"><div class="ico">CP</div><span class="arrow">↗</span></div><h3>Customer Churn Prediction Pipeline</h3><p>End-to-end churn prediction on about 1M telecom records: LightGBM model, SQL Server analytics, a Streamlit app, and a live explorer with in-browser what-if scoring.</p><div class="metric">ROC-AUC 0.635 on 999,999 rows, honest limits</div><div class="tags"><span>LightGBM</span><span>SQL Server</span><span>Streamlit</span><span>Power BI</span></div></a>
   <a class="card rv" data-c="analysis" href="https://hassan3443.github.io/sales-data-analysis/" target="_blank" rel="noopener"><div class="shot"><img src="img/sda.webp" alt="" loading="lazy"></div><div class="top"><div class="ico">SA</div><span class="arrow">↗</span></div><h3>Sales Data Analysis</h3><p>Two years of retail sales: revenue trends, RFM customer segments, cohort retention, a Pareto analysis and a backtested forecast.</p><div class="metric">3,269 orders, forecast MAPE 12.2%</div><div class="tags"><span>Python</span><span>Pandas</span><span>Matplotlib</span></div></a>
   <a class="card rv" data-c="analysis" href="https://hassan3443.github.io/sql-business-analytics/" target="_blank" rel="noopener"><div class="shot"><img src="img/sql.webp" alt="" loading="lazy"></div><div class="top"><div class="ico">SQ</div><span class="arrow">↗</span></div><h3>SQL Business Analytics</h3><p>A SQLite sales database with 21 queries, including window functions. Run and edit them in the browser, with a chart and CSV export. Comes with an ERD and tests.</p><div class="metric">Live playground, 21 queries</div><div class="tags"><span>SQL</span><span>SQLite</span><span>Python</span></div></a>
@@ -198,9 +252,9 @@ const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 addEventListener('scroll',()=>{const h=document.documentElement;$('#pg').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'});
 // typing
 const words=['Data analyst','Python and SQL','Data cleaning','Dashboards and reports'];let w=0,c=0,del=false;
-(function t(){const el=$('#type'),cur=words[w];el.textContent=cur.slice(0,c);if(!del&&c++===cur.length){del=true;return setTimeout(t,1400)}if(del&&c--===0){del=false;w=(w+1)%words.length}setTimeout(t,del?35:75)})();
+$('#type').textContent='Data analyst, Python and SQL';$('#type').classList.add('static');(function t(){return;const el=$('#type'),cur=words[w];el.textContent=cur.slice(0,c);if(!del&&c++===cur.length){del=true;return setTimeout(t,1400)}if(del&&c--===0){del=false;w=(w+1)%words.length}setTimeout(t,del?35:75)})();
 // reveal + counters
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');const b=e.target.querySelector('[data-n]');if(b&&!b.done){b.done=1;const n=+b.dataset.n,t0=performance.now();(function f(t){const p=Math.min((t-t0)/1400,1);b.textContent=Math.round(n*(1-Math.pow(1-p,3))).toLocaleString('en-US');if(p<1)requestAnimationFrame(f)})(t0)}io.unobserve(e.target)}}),{threshold:.15});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');const b=e.target.querySelector('[data-n]');if(b&&!b.done){b.done=1;b.textContent=(+b.dataset.n).toLocaleString('en-US');const n=+b.dataset.n,t0=performance.now();(function f(t){return;const p=Math.min((t-t0)/1400,1);b.textContent=Math.round(n*(1-Math.pow(1-p,3))).toLocaleString('en-US');if(p<1)requestAnimationFrame(f)})(t0)}io.unobserve(e.target)}}),{threshold:.15});
 $$('.rv').forEach(e=>io.observe(e));
 // filters
 $$('.f').forEach(b=>b.onclick=()=>{$$('.f').forEach(x=>x.classList.remove('on'));b.classList.add('on');$$('.card').forEach(c=>c.style.display=(b.dataset.f==='all'||c.dataset.c===b.dataset.f)?'':'none')});
@@ -208,16 +262,11 @@ $$('.f').forEach(b=>b.onclick=()=>{$$('.f').forEach(x=>x.classList.remove('on'))
 $$('.card').forEach(c=>c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--x',e.clientX-r.left+'px');c.style.setProperty('--y',e.clientY-r.top+'px')}));
 // active nav
 const secs=$$('section[id]');addEventListener('scroll',()=>{let id='';secs.forEach(s=>{if(scrollY>=s.offsetTop-200)id=s.id});$$('.nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+id))});
-// network canvas
-const cv=$('#net'),x=cv.getContext('2d');let W,H,P=[];function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight;P=Array.from({length:Math.min(70,W/20|0)},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35}))}rs();addEventListener('resize',rs);
-let mx=-999,my=-999;addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
-(function d(){x.clearRect(0,0,W,H);P.forEach((p,i)=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;x.fillStyle='rgba(52,211,153,.7)';x.beginPath();x.arc(p.x,p.y,1.6,0,7);x.fill();for(let j=i+1;j<P.length;j++){const q=P[j],dd=Math.hypot(p.x-q.x,p.y-q.y);if(dd<130){x.strokeStyle=`rgba(56,189,248,${.18*(1-dd/130)})`;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}const m=Math.hypot(p.x-mx,p.y-my);if(m<160){x.strokeStyle=`rgba(167,139,250,${.4*(1-m/160)})`;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(mx,my);x.stroke()}});requestAnimationFrame(d)})();
 
 // stagger + tilt
 $$('.card').forEach((c,i)=>{c.style.transitionDelay=(i%3)*90+'ms';c.addEventListener('mouseenter',()=>c.style.transitionDelay='0ms');
-c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;c.style.transform=`translateY(-6px) perspective(900px) rotateX(${-py*5}deg) rotateY(${px*6}deg)`});
+c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;c.style.transform='translateY(-4px)'});
 c.addEventListener('mouseleave',()=>c.style.transform='')});
 $$('.btn').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.12}px,${(e.clientY-r.top-r.height/2)*.2-2}px)`});b.addEventListener('mouseleave',()=>b.style.transform='')});
-addEventListener('scroll',()=>{const y=scrollY;$('.a1').style.marginTop=y*.12+'px';$('.a2').style.marginBottom=y*.1+'px'},{passive:true});
 </script>
 </body></html>
