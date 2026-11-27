@@ -96,7 +96,7 @@ footer{padding:36px 0;color:var(--mut);font-size:14px;border-top:1px solid var(-
 .rv{opacity:0;transform:translateY(28px);transition:.8s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}
 @media(max-width:900px){.hero .grid{grid-template-columns:1fr}.term{display:none}.stats,.skills{grid-template-columns:repeat(2,1fr)}.cards,.hire{grid-template-columns:1fr}.bento{grid-template-columns:1fr}.s2,.s3,.s4{grid-column:auto}.nav a:nth-child(n+5){display:none}}
 .shot{height:180px;margin:-26px -26px 4px;overflow:hidden;border-bottom:1px solid var(--line);background:#0b0f14}.shot img{width:100%;height:100%;object-fit:cover;object-position:50% 0%;animation:pan 14s ease-in-out infinite alternate}.card:hover .shot img{animation-duration:7s}@keyframes pan{from{object-position:50% 0%}to{object-position:50% 100%}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1;transform:none}}
 .card.rv.in{transition:opacity .8s,transform .25s ease-out,border-color .3s}.btn.p:hover{box-shadow:0 14px 36px -6px rgba(52,211,153,.75)}/* ===== Glassy theme: teal-to-indigo backdrop, frosted panels, visible borders.
    The slow background drift is the only running animation. ===== */
 :root{--bg:#1a6a86;--card:transparent;--line:rgba(255,255,255,.34);--txt:#fff;--mut:rgba(255,255,255,.82);--a:#9ff5dc;--b:#bfe3ff;--c:#d6ccff;--d:#ffd0ec;
@@ -110,9 +110,9 @@ radial-gradient(42% 38% at 85% 15%,rgba(120,190,255,.40),transparent 70%),
 radial-gradient(46% 42% at 70% 90%,rgba(190,140,255,.42),transparent 70%),
 radial-gradient(34% 30% at 10% 85%,rgba(40,170,200,.45),transparent 70%)}
 .bgfx{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.bgfx svg{position:absolute;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;opacity:.3;animation:fl var(--t,60s) ease-in-out var(--d,0s) infinite alternate}
+.bgfx svg{position:absolute;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;opacity:.3;animation-name:fl;animation-duration:calc(var(--t,60s) * .45);animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-direction:alternate;will-change:transform}
 .bgfx .py{opacity:.5;stroke:none}
-@keyframes fl{from{transform:translate(0,0) rotate(var(--r0,0deg))}to{transform:translate(var(--x,24px),var(--y,-36px)) rotate(var(--r1,8deg))}}
+@keyframes fl{from{transform:translate(0,0) rotate(0deg)}to{transform:translate(calc(var(--x,24px)*5),calc(var(--y,-36px)*5)) rotate(calc(var(--r1,8deg)*4))}}
 @media(max-width:900px){.bgfx svg:nth-child(n+5){display:none}}
 .progress{display:none}
 ::selection{background:rgba(255,255,255,.35);color:#fff}
@@ -153,6 +153,7 @@ h1{text-shadow:0 2px 18px rgba(4,24,44,.35)}
 .hire .bx:before{background:linear-gradient(90deg,#fff,#9ff5dc)}
 .cta{background:radial-gradient(circle at 50% 0,rgba(255,255,255,.25),transparent 60%),var(--glass)!important}
 footer{border-top:1px solid var(--gb);color:rgba(255,255,255,.85)}
+@media(prefers-reduced-motion:reduce){.bgfx svg{animation-name:fl!important;animation-duration:calc(var(--t,60s) * .9)!important;animation-iteration-count:infinite!important;animation-direction:alternate!important;animation-timing-function:ease-in-out!important;animation-play-state:running!important;animation-delay:0s!important;animation-fill-mode:none!important}}
 </style>
 </head>
 <body>
